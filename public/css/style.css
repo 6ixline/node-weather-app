@@ -86,3 +86,10 @@ box-shadow:  5px 5px 10px #e6e6e6,
     letter-spacing: 2px;
     margin:5px 0;
 }
+
+
+@media (max-width:1200px){
+    body{
+        width:100%;
+    }
+}
