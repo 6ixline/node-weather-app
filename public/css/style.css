@@ -3,7 +3,7 @@ body{
      font-family: Arial;
      max-width: 960px;
      margin:0 auto;
-     padding:0 16px;
+     padding:0 20px;
      display:flex;
      flex-direction: column;
      min-height: 100vh;
@@ -11,8 +11,11 @@ body{
 .main-content{
     flex-grow: 1;
 }
+
 p{
     font-size: 18px;
+    margin:16px 0;
+    letter-spacing: 1px;
 }
 footer {
     color:#888888;
@@ -25,16 +28,18 @@ footer p{
 }
 header{
     margin-top: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 35px;
 }
 header>a{
     color: #888888;
     margin-right: 16px;
     text-decoration: none;
+    letter-spacing: .06em;
 }
 h1{
-    font-size: 64px;
+    font-size: 70px;
     margin-bottom: 16px;
+    letter-spacing: 1px;
 }
 form{
     display: flex;
@@ -61,7 +66,6 @@ button{
     letter-spacing: 3px;
     padding:8px 15px;
     margin-left:30px;
-    margin-right:30px;
     width:145px;
     border:none;
    border-radius: 2px;
@@ -74,4 +78,11 @@ box-shadow:  5px 5px 10px #e6e6e6,
 #location{
     font-size:20px;
     margin-top:30px;
+}
+
+.temp{
+    color:#333333;
+    font-size:60px;
+    letter-spacing: 2px;
+    margin:5px 0;
 }
