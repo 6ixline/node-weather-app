@@ -45,6 +45,9 @@ form{
     display: flex;
     width: 100%;
 }
+#mylocation{
+    display: inline-block;
+}
 
 input{
     border:none; 

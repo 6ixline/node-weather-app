@@ -13,10 +13,14 @@
     <div class="main-content">
         {{>header}}
         <p>Use this site to get your weather!</p><Br>
-        <form>
-            <input type="text" placeholder="Type location">
-            <button>Search</button>
-        </form>
+       <div style="display: flex;">
+            <form>
+                <input type="text" placeholder="Type location">
+                <button>Search</button>
+            
+            </form>
+            <button style="width:fit-content" id="mylocation"><img src="/img/weather.png" width="30"></button>
+       </div>
         <p id="location"></p>
     </div>
     {{>footer}}

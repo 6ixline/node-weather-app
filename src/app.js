@@ -21,6 +21,8 @@ hbs.registerPartials(partialPath)
 // Setup static directory for serve
 app.use(express.static(publicDirectoryPath))
 
+app.use(express.json())
+
 app.get('',(req,res)=>{
     res.render('index',{
         title: 'Weather',
@@ -73,6 +75,28 @@ app.get('/weather',(req,res)=>{
     })
 
    
+})
+
+app.get('/weather/:lat,:long',async(req,res)=>{
+
+    geocode(`${req.params.lat},${req.params.long}`,(err,data)=>{
+        const location = 'Your Location'
+        if(!err){
+            location = data.location
+        }
+
+        forecast(req.params.lat, req.params.long, (err, forecast) => {
+            if (err) {
+                return res.send(err)
+            }
+            res.send({
+                forecast,
+                location
+            })
+        })
+    })
+    
+       
 })
 
 app.get('/help/*',(req,res)=>{
